@@ -27,7 +27,8 @@ export default class MultiStep extends Component {
                 nextFn:this.next,
                 prevFn:this.previous,
                 saveState:this.saveStepState,
-                getState:this.getStepState
+                getState:this.getStepState,
+                setStep:this.setStep
             })
             
             
@@ -43,6 +44,9 @@ export default class MultiStep extends Component {
             this.finishWizard()
         }
         
+    }
+    setStep(step) {
+        this.setState({curState: step});
     }
     previous(){
         if((this.state.curState - 1) >= 0 ){
