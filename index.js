@@ -14,6 +14,7 @@ export default class MultiStep extends Component {
         this.saveStepState = this.saveStepState.bind(this)
         this.getStepState = this.getStepState.bind(this)
         this.finishWizard = this.finishWizard.bind(this)
+        this.setStep = this.setStep.bind(this)
          this.state = {
             curState:0,
             steplist:[],
